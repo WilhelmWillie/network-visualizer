@@ -13,8 +13,8 @@ See `example_connections.csv` and `example_network.json` for examples of what th
 
 ## To-Do
 
-* [] Actually build out the network D3.js visualizer 😅
-* [] Build, train, and implement a model that will automatically extrapolate role information based off position title (ex: Full Stack Developer -> tech/engineering, Summer Business Analyst -> intern)
-* [] Build a web service that hooks into LinkedIn's API so that users don't have to go through steps 1-3
-  * [] Add ability to view network by education
-  * [] Host app on Heroku or GCP or DO
+- [ ] Actually build out the network D3.js visualizer 😅
+- [ ] Build, train, and implement a model that will automatically extrapolate role information based off position title (ex: Full Stack Developer -> tech/engineering, Summer Business Analyst -> intern)
+- [ ] Build a web service that hooks into LinkedIn's API so that users don't have to go through steps 1-3
+  - [ ] Add ability to view network by education
+  - [ ] Host app on Heroku or GCP or DO
