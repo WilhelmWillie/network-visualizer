@@ -7,7 +7,8 @@ Tool that helps you visualize your LinkedIn network and gain insights into your 
 1. Export your LinkedIn connections to a CSV file using [this guide](https://www.linkedin.com/help/linkedin/answer/66844/exporting-connections-from-linkedin?lang=en)
 2. Place that CSV file in the root folder of this project and name it `connections.csv`
 3. Run the Python script `csv_to_json.py`. This will generate a file called `network.json`
-4. Open `index.html` to see a basic visualization of your LinkedIn network
+4. Run `python -m SimpleHTTPServer <port>` to spin up a local web server (defaults to port 8000)
+5. Open `localhost:<port>` to see a basic visualization of your LinkedIn network
 
 See `example_connections.csv` and `example_network.json` for examples of what these files should look like
 

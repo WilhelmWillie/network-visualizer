@@ -71,7 +71,8 @@ if __name__ == '__main__':
   for company in connections:
     nodes.append({
         'id': 'company ' + company,
-        'label': company
+        'label': company,
+        'value': companyFrequency[company]
       })
 
     links.append({

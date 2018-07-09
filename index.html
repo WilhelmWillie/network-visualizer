@@ -1,12 +1,34 @@
 <!doctype html>
 
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>LinkedIn Network Visualizer</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .links line {
+        stroke: #999;
+        stroke-opacity: 0.6;
+      }
+
+      .nodes circle {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      .nodes text {
+        stroke:#333;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>LinkedIn Network Visualizer</h1>
-    <p>A visualizer built with D3.js will be here. One day. Soon. Hopefully by tomorrow. Or next week. Or never.</p>
+    <script src="js/network-visualizer.js"></script>
   </body>
 </html>
