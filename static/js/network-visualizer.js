@@ -4,6 +4,7 @@ var width = window.innerWidth,
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
+    .call(d3.zoom().on("zoom", zoomed));
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
@@ -63,3 +64,9 @@ d3.json("/network").then(function(network) {
         .attr("cy", function(d) { return d.y; });
   }
 });
+
+// Helper functions used for drag control
+function zoomed() {
+  // svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  console.log('test');
+}
