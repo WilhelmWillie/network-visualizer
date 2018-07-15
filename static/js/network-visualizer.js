@@ -11,15 +11,18 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody().strength(-8))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
+var link;
+var node;
+
 d3.json("/network").then(function(network) {
-  var link = svg.append("g")
+  link = svg.append("g")
       .attr("class", "links")
       .selectAll("line")
       .data(network.links)
       .enter().append("line")
       .attr("stroke-width", function(d) { return d.value });
 
-  var node = svg.append("g")
+  node = svg.append("g")
       .attr("class", "nodes")
       .selectAll("circle")
       .data(network.nodes)
@@ -67,6 +70,8 @@ d3.json("/network").then(function(network) {
 
 // Helper functions used for drag control
 function zoomed() {
-  // svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-  console.log('test');
+  var transform = d3.zoomTransform(this);
+
+  link.attr("transform", "translate(" + transform.x + "," + transform.y + ") scale(" + transform.k + ")");
+  node.attr("transform", "translate(" + transform.x + "," + transform.y + ") scale(" + transform.k + ")");
 }
